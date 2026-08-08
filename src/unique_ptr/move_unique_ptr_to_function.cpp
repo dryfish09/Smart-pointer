@@ -20,7 +20,8 @@ void takeOwnerShip(std::unique_ptr<ClassRoom> teacher) {
 int main() {
     std::cout<<"Starting class..."<<std::endl;
     {
-        auto p = std::unique_ptr<ClassRoom>();
+        auto p = std::unique_ptr<ClassRoom>;
+        p = std::make_unique<ClassRoom>();
         takeOwnerShip(std::move(p));
     }
     return 0;
