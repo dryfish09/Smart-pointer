@@ -15,14 +15,15 @@ public:
     }
 };
 void takeOwnerShip(std::unique_ptr<ClassRoom> teacher) {
-    std::cout<<"Teacher A is in class right now!"<<std::endl;
+    std::cout<<"Teacher is in class right now!"<<std::endl;
+    teacher->teach();
 }
 int main() {
     std::cout<<"Starting class..."<<std::endl;
     {
-        auto p = std::unique_ptr<ClassRoom>;
-        p = std::make_unique<ClassRoom>();
+        std::unique_ptr<ClassRoom> p = std::make_unique<ClassRoom>();
         takeOwnerShip(std::move(p));
+        std::cout<<"teacher changed!"<<std::endl;
     }
     return 0;
 }
