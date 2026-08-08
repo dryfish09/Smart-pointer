@@ -1,5 +1,5 @@
 // Created by dryfish09. The guy who is the C++ newcomer
-// filename: mov_permission.cpp
+// filename: unique_ptr_move_pointer.cpp
 #include <iostream>
 #include <memory>
 class ClassRoomInit {
