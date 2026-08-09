@@ -29,6 +29,8 @@ int main() {
         } else {
             std::cout<<"Object still alive"<<std::endl;
         }
+        // teacher continues teaching:
+        owner->teach();
     }
     return 0;
 }
