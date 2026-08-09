@@ -15,7 +15,7 @@ public:
         std::cout<<"Teacher is teaching...."<<std::endl;
     }
 };
-// this function will change permission to other pointer and call its function (i think maybe)
+// this function will change permission to other pointer and call its function 
 void takeOwnerShip(std::unique_ptr<ClassRoom> teacher) {
     std::cout<<"Teacher is in class right now!"<<std::endl;
     // call function:
@@ -25,7 +25,7 @@ int main() {
     std::cout<<"Starting class..."<<std::endl;
     {
         std::unique_ptr<ClassRoom> p = std::make_unique<ClassRoom>();
-        // change classroom permission from p to teacher by method (not sure: it's that right?)
+        // change classroom permission from p to teacher by method 
         takeOwnerShip(std::move(p));
         std::cout<<"teacher changed!"<<std::endl;
     }
