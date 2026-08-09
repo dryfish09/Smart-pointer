@@ -27,5 +27,5 @@ int main() {
         teacher2->teaching(); // teacher 2 are teaching!
     } // deleted teacher2, but object still alive because teacher1 still alive.
     // teacher1 deleted here
-    return0;
+    return 0;
 }
