@@ -24,7 +24,7 @@ int main() {
         // check how many pointers are using owner shared pointer:
         std::cout<<"Used time: " << owner.use_count() <<std::endl; // will be 1 (itself)
         // is object alive? Let's check!
-        if (watcher.expired) {
+        if (watcher.expired()) {
             std::cout<<"object died!"<<std::endl;
         } else {
             std::cout<<"Object still alive"<<std::endl;
