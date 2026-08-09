@@ -33,6 +33,6 @@ int main() {
         if (auto temp = watcher.lock()) {
             temp->teach(); // can be used because have shared_ptr         
         }
-    } // we no need to call owner.reset() because it free all object and pointer
+    } // we no need to call owner.reset() because owner go out of scope and free all object and pointer
     return 0;
 }
