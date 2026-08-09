@@ -24,3 +24,8 @@ int main() {
         // shared_ptr allows copy!
         std::shared_ptr<ClassRoom> teacher2 = teacher1;
         cout<<"Used: " << teacher1.use_count() << " times." << std::endl; // must be 2
+        teacher2->teaching(); // teacher 2 are teaching!
+    } // deleted teacher2, but object still alive because teacher1 still alive.
+    // teacher1 deleted here
+    return0;
+}
