@@ -16,8 +16,10 @@ int main() {
     std::cout<<"Class begins!"<<std::endl;
     {
         std::unique_ptr<Student> Jack = std::make_unique<Student>("Jack");
-        std::cout<<"Current student: Jack"<<std::endl;
+        std::cout<<"Current student: "<< Jack->name << std::endl;
         std::unique_ptr<Student> Mary = std::move(Jack);
         std::cout<<"unique_ptr changed to mary"<<std::endl;
+        std::cout<<"Mary now is the owner of the object named: " << Mary->name << std::endl;
     }
+    return 0;
 }
