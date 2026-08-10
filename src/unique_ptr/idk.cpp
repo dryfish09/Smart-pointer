@@ -1,5 +1,6 @@
 #include <iostream>
 #include <memory>
+#include <string> // string is not a built-in type
 
 class Student {
 public:
